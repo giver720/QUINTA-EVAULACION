@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std; 
+
+int main () {
+int arreglo[6]={5,3,8,9,1,2};
+
+for(int i=0;i<5;i++) {
+for(int j=0;j<5-i;j++) {
+if (arreglo[j]>arreglo[j+1]) {
+int a=arreglo[j];
+int b=arreglo[j+1];
+
+int temp=arreglo[j];
+arreglo[j]=arreglo[j+1];
+arreglo[j+1]=temp;
+
+cout<<"Se intercambiaron" 
+<<a<<"y"<<b<<endl;
+
+for(int k=0;k<6;k++) {
+cout<<arreglo[k]<<"";
+}
+
+cout<<endl<< endl;
+}
+}
+}
+
+
+ 
+    
+return 0;
+}
